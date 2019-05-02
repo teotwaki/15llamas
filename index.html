@@ -2,17 +2,17 @@
   <head>
     <title>15 llamas</title>
     <script>
-      const imageCount = 1;
+      const imageCount = 57;
 
       function getRandomImage() {
         const index = Math.ceil(Math.random() * imageCount);
         return `/img/${index}.gif`;
       }
-      
+
       function pickImage() {
         var randomImage = getRandomImage();
         var prop = `url("${randomImage}") center center no-repeat`;
-        
+
         document.body.style.background = prop;
       }
     </script>
@@ -23,6 +23,6 @@
       }
     </style>
   </head>
-  <body onload="pickImage();">
+  <body onload="pickImage();" onclick="pickImage();">
   </body>
 </html>
