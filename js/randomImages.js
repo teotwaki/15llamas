@@ -1,6 +1,6 @@
-const images = [
-];
+const imageCount = 1;
 
 function getRandomImage() {
-	return images[Math.floor(Math.random() * images.length)];
+  const index = Math.ceil(Math.random() * imageCount);
+  return `/img/${index}.gif`;
 }
