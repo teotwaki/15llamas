@@ -11,28 +11,18 @@
       
       function pickImage() {
         var randomImage = getRandomImage();
-        var tag = document.getElementById("randomImage");
+        var prop = `url("${randomImage}") center center no-repeat`;
         
-        tag.src = randomImage;
-        tag.class = "center";
+        document.body.style.background = prop;
       }
     </script>
     <style>
-      .hidden {
-        display: none;
-      }
-      
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+      body {
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body onload="pickImage();">
-    <div style="width: 100%;">
-      <img id="randomImage" class="hidden" />
-    </div>
   </body>
 </html>
