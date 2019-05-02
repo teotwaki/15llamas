@@ -14,11 +14,23 @@
         var tag = document.getElementById("randomImage");
         
         tag.src = randomImage;
-        tag.style = "";
+        tag.class = "center";
       }
     </script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
   </head>
   <body onload="pickImage();">
-    <img id="randomImage" style="display: none" />
+    <img id="randomImage" class="hidden" />
   </body>
 </html>
